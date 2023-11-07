@@ -6,8 +6,8 @@ let primerResultado = null;
 let segundoResultado = null;
 let movimientos = 0;
 let temporizador =  false;
-let timer = 30;
-let timerInicial = 30;
+let timer = 0;
+let timerInicial = 0;
 let tiempoRegresivoId = null
 
 
@@ -24,7 +24,7 @@ console.log(numeros);
 //Funciones
 function contarTiempo(){
     tiempoResgresivoId = setInterval(()=>{
-        timer--;
+        timer++;
         mostrarTiempo.innerHTML = `Tiempo: ${timer} segundos`;
         if(timer == 0){
             clearInterval(tiempoRegresivoId);
